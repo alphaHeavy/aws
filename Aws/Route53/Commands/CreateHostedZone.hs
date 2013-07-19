@@ -54,7 +54,7 @@ instance ResponseConsumer r CreateHostedZoneResponse where
     responseConsumer _ = route53ResponseConsumer parse
         where 
         parse cursor = do
-            route53CheckResponseType () "GetHostedZoneResponse" cursor
+            route53CheckResponseType () "CreateHostedZoneResponse" cursor
             zone <- r53Parse cursor
             changeInfo <- r53Parse cursor
             delegationSet <- r53Parse cursor
