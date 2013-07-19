@@ -76,6 +76,12 @@ data Configuration
       , logger :: Logger
       }
 
+instance Show Configuration where
+    show (Configuration t c _) =
+        "Configuration { timeInfo = " ++ show t
+            ++ ", credentials = " ++ show c
+            ++ ", logger = _ }"
+
 -- | The default configuration, with credentials loaded from environment variable or configuration file
 -- (see 'loadCredentialsDefault').
 baseConfiguration :: MonadIO io => io Configuration
