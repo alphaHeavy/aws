@@ -318,7 +318,7 @@ instance Route53Parseable HostedZone where
     zoneId <- force "Missing hostedZoneId element" $ c $/ elContent "Id" &| asId
     name <- force "Missing Name element" $ c $/ elContent "Name" &| Domain
     callerReference <- force "Missing CallerReference element" $ c $/ elContent "CallerReference"
-    comment <- force "Missing Comment element" $ c $// elContent "Comment"
+    let comment = case (c $// elContent "Comment") of { [] -> T.empty; (x:_) -> x }
     resourceRecordSetCount <- forceM "Missing ResourceRecordCount" $ c $/ elCont "ResourceRecordSetCount" &| readInt
     return $ HostedZone zoneId name callerReference comment resourceRecordSetCount
 
