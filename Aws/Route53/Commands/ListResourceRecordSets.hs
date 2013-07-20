@@ -68,7 +68,7 @@ instance ResponseConsumer r ListResourceRecordSetsResponse where
         parser cursor = do
             route53CheckResponseType () "ListResourceRecordSetsResponse" cursor
             resourceRecordSets <- r53Parse cursor
-            isTruncated <- force "Missing IsTruncated element" $ cursor $/ elCont "IsTruncated" &| ("True"==)
+            isTruncated <- force "Missing IsTruncated element" $ cursor $/ elCont "IsTruncated" &| ("true"==)
             maxItems <- listToMaybe <$> (sequence $ cursor $/ elCont "MaxItems" &| readInt)
             let nextRecordName = listToMaybe $ cursor $// elContent "NextRecordName" &| Domain
             let nextRecordType = listToMaybe $ cursor $// elCont "NextRecordType" &| read
