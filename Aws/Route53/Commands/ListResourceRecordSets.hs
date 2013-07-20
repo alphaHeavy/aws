@@ -4,13 +4,13 @@
 
 -- | GET ListResourceRecordSets
 --
---   Lists the resource record sets for a Route53 hosted zone. The hosted zone is identifed by
+--   Lists the resource record sets for a Route53 hosted zone. The hosted zone is identified by
 --   the hostedZoneId which is retrieved in the response to 'Aws.Route53.Commands.ListHostedZones' 
 --   or 'Aws.Route53.Commands.CreateHostedZone'.
 -- 
 --   <http://docs.amazonwebservices.com/Route53/latest/APIReference/API_ListResourceRecordSets.html>
 --
---   NOTE: the parameter 'identifier' is required for weighted and laltency resource record sets. This is
+--   NOTE: the parameter 'identifier' is required for weighted and latency resource record sets. This is
 --   not enforced by the type.
 --
 module Aws.Route53.Commands.ListResourceRecordSets where
