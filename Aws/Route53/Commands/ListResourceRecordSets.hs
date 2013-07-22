@@ -33,6 +33,10 @@ data ListResourceRecordSets = ListResourceRecordSets
                    , lrrsMaxItems :: Maybe Int          -- ^ maximum effective value is 100
                    } deriving (Show)
 
+instance AsMemoryResponse ListResourceRecordSetsResponse  where
+    type MemoryResponse ListResourceRecordSetsResponse = ListResourceRecordSetsResponse
+    loadToMemory = return
+
 -- | A most general 'ListResourceRecordSets' query
 listResourceRecordSets :: HostedZoneId -> ListResourceRecordSets
 listResourceRecordSets hostedZoneId = ListResourceRecordSets hostedZoneId Nothing Nothing Nothing Nothing
