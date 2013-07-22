@@ -75,7 +75,7 @@ Library
                        Aws.Ses.Commands.SetIdentityNotificationTopic,
                        Aws.Ses.Commands.SetIdentityDkimEnabled,
                        Aws.Ses.Commands.SetIdentityFeedbackForwardingEnabled,
-                       Aws.Ses.Core
+                       Aws.Ses.Core,
                        Aws.Route53,
                        Aws.Route53.Core
                        Aws.Route53.Commands,

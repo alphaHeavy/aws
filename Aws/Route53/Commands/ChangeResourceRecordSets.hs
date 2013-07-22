@@ -33,6 +33,10 @@ data ChangeResourceRecordSetsResponse = ChangeResourceRecordSetsResponse
   { crrsrChangeInfo :: ChangeInfo
   } deriving (Show)
 
+instance AsMemoryResponse ChangeResourceRecordSetsResponse  where
+    type MemoryResponse ChangeResourceRecordSetsResponse  = ChangeResourceRecordSetsResponse 
+    loadToMemory = return
+
 -- | ServiceConfiguration: 'Route53Configuration'
 instance SignQuery ChangeResourceRecordSets where
     type ServiceConfiguration ChangeResourceRecordSets = Route53Configuration
