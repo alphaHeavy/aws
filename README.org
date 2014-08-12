@@ -88,7 +88,37 @@ You can also find this example in the source distribution in the ~Examples/~ fol
 
 * Release Notes
 
+** 0.9 series
+
+- 0.9.1
+  - Support for multi-page S3 GetBucket requests
+  - S3 GLACIER support
+  - Applicative instance for Response to conform to the Applicative-Monad Proposal
+  - Compatibility with transformers 0.4
+
+- 0.9
+  - Interface changes:
+    - attempt and failure were deprecated, remove
+    - switch to new cryptohash interface
+  - updated version bounds of conduit and xml-conduit
+
 ** 0.8 series
+
+- 0.8.6
+  - move Instance metadata functions out of ResourceT to remove problem with exceptions-0.5
+    (this makes a fresh install of aws on a clean system possible again)
+
+- 0.8.5
+  - compatibility with case-insensitive 1.2
+  - support for V4 signatures
+  - experimental support for DynamoDB
+
+- 0.8.4
+  - compatibility with http-conduit 2.0
+
+- 0.8.3
+  - compatibility with cryptohash 0.11
+  - experimental IAM support
 
 - 0.8.2
   - compatibility with cereal 0.4.x
@@ -199,6 +229,7 @@ You can also find this example in the source distribution in the ~Examples/~ fol
 
 | Name               | Github       | E-Mail                    | Company                | Components    |
 |--------------------+--------------+---------------------------+------------------------+---------------|
+| Abhinav Gupta      | [[https://github.com/abhinav][abhinav]]  | mail@abhinavg.net | -  | IAM, SES      |
 | Aristid Breitkreuz | [[https://github.com/aristidb][aristidb]]     | aristidb@gmail.com        | -                      | Co-Maintainer    |
 | Bas van Dijk       | [[https://github.com/basvandijk][basvandijk]]   | v.dijk.bas@gmail.com      | [[http://erudify.ch][Erudify AG]]             | S3            |
 | David Vollbracht   | [[https://github.com/qxjit][qxjit]]        |                           |                        |               |
@@ -207,3 +238,5 @@ You can also find this example in the source distribution in the ~Examples/~ fol
 | Ozgun Ataman       | [[https://github.com/ozataman][ozataman]]     | ozgun.ataman@soostone.com | [[http://soostone.com][Soostone Inc]]           | Core, S3      |
 | Steve Severance    | [[https://github.com/sseveran][sseveran]]     | sseverance@alphaheavy.com | [[http://www.alphaheavy.com][Alpha Heavy Industries]] | S3, SQS       |
 | John Wiegley       | [[https://github.com/jwiegley][jwiegley]]     | johnw@fpcomplete.com      | [[http://fpcomplete.com][FP Complete]]            | Co-Maintainer, S3            |
+| Chris Dornan | [[https://github.com/cdornan][cdornan]] | chris.dornan@irisconnect.co.uk | [[http://irisconnect.co.uk][Iris Connect]] | Core |
+| John Lenz | [[https://github/com/wuzzeb][wuzzeb]] | | | DynamoDB, Core |
