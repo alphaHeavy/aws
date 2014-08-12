@@ -103,7 +103,7 @@ Library
                        Aws.Route53.Commands.CreateHostedZone,
                        Aws.Route53.Commands.DeleteHostedZone,
                        Aws.Route53.Commands.GetChange,
-                       Aws.Route53.Commands.GetDate
+                       Aws.Route53.Commands.GetDate,
                        Aws.DynamoDb.Commands,
                        Aws.DynamoDb.Commands.Table,
                        Aws.DynamoDb.Core,
@@ -139,7 +139,7 @@ Library
                        transformers         >= 0.2.2 && < 0.5,
                        unordered-containers >= 0.2,
                        utf8-string          == 0.3.*,
-                       xml-hamlet           >= 0.3.0,
+                       xml-hamlet           >= 0.3.0
                        vector               >= 0.10,
                        xml-conduit          >= 1.2 && <1.3
 
