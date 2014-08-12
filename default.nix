@@ -1,2 +1,4 @@
 { pkgs ? import <nixpkgs> {} }:
-pkgs.haskellPackages.callPackage ./aws.nix {}
+let hask = pkgs.haskellPackages_ghc782.override { extension = self : super : {
+}; };
+in hask.callPackage ./aws.nix {}
